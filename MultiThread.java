@@ -1,8 +1,11 @@
+// We can create Multithread using two way 1. using Runnable interface and 2. using Thread class
+
+//1.
 class Process1 implements Runnable {
 
     // as it is child class of Runnable so we have to @Override the Run method
     public void run() {
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Index of Process1 is: " + i);
         }
     }
@@ -13,8 +16,27 @@ class Process2 implements Runnable {
 
     // as it is child class of Runnable so we have to @Override the Run method
     public void run() {
-        for (int i = 50; i < 75; i++) {
+        for (int i = 50; i < 55; i++) {
             System.out.println("Index of Process2 is: " + i);
+        }
+    }
+}
+
+class Proc1 extends Thread {
+
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Index of Proc1 is: " + i);
+        }
+    }
+
+}
+
+class Proc2 extends Thread {
+
+    public void run() {
+        for (int i = 50; i < 55; i++) {
+            System.out.println("Index of Proc2 is: " + i);
         }
     }
 }
@@ -35,5 +57,15 @@ public class MultiThread {
         // To start Thread ,it's have start method
         t1.start();
         t2.start();
+
+        // for second way no need to create the object of Thread as Proc is the child of
+        // that class so start method is already inheritted
+
+        Proc1 pr1 = new Proc1();
+        Proc2 pr2 = new Proc2();
+
+        // so now we can directly write
+        pr1.start();
+        pr2.start();
     }
 }
