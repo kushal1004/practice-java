@@ -25,6 +25,7 @@ public class ClosestPrime {
 
         if (isPrime(n)) {
             System.out.println(n + " is prime number");
+            sc.close();
             return;
         }
 
