@@ -1,3 +1,4 @@
+package Number;
 //Asked in Deloitee, it is used to convert binary number to decimal and decimal number to binary
 class Convert {
     static void decimalToBinary(int decimal) {

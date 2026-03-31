@@ -1,5 +1,5 @@
 // I have asked this question in OneBanc technical interview ; level is easy
-
+package Number;
 import java.util.*;
 
 public class ClosestPrime {
