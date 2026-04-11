@@ -67,3 +67,5 @@ public class MergedStringAlternately {
         sc.close();
     }
 }
+
+// Time and space complexity = O(n+m)
