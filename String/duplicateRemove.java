@@ -1,4 +1,5 @@
 package String;
+
 import java.util.Scanner;
 
 public class duplicateRemove {
@@ -6,22 +7,37 @@ public class duplicateRemove {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter your String: ");
-        try {
-            String str = sc.nextLine();
-            String unique = "";
+        String str = sc.nextLine();
+        String unique = " ";
 
-            for (int i = 0; i < str.length(); i++) {
-                if (unique.indexOf(str.charAt(i)) == -1) {
-                    unique += str.charAt(i);
-                }
+        for (int i = 0; i < str.length(); i++) {
+            if (unique.indexOf(str.charAt(i)) == -1) {
+                unique += str.charAt(i);
             }
-
-            System.out.print("Unique String is " + unique);
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
         }
 
-        sc.close();
+        System.out.print("Unique String is " + unique);
+
+        // Scanner sc = new Scanner(System.in);
+
+        // System.out.println("Enter your String: ");
+        // try {
+        // String str = sc.nextLine();
+        // String unique = "";
+
+        // for (int i = 0; i < str.length(); i++) {
+        // if (unique.indexOf(str.charAt(i)) == -1) {
+        // unique += str.charAt(i);
+        // }
+        // }
+
+        // System.out.print("Unique String is " + unique);
+        // } catch (Exception e) {
+        // System.out.println("Error: " + e.getMessage());
+        // }
+
+        // sc.close();
 
     }
+
 }
